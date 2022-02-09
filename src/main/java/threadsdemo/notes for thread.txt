@@ -1,0 +1,20 @@
+ - more memory usage
+- when you extend a thread class , you can not extend any other class as multiple inheritence is not allowed
+- You can use implements Runnable interface and implement any other interfaces4
+	runnable has only - run method
+
+-------------------------------------
+Main Thread
+-------------------------------------
+ - to create child thread in main thread
+ 
+---------------
+Demon Thread
+-------------
+Daemon thread in Java is a low-priority thread that runs in the background to perform tasks such as garbage collection
+
+-------------
+Multi Threading
+-------------
+- run multiple threads at same time
+
