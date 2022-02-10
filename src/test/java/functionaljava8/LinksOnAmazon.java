@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -25,7 +27,14 @@ public class LinksOnAmazon {
 		 */
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--force-dark-mode");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		options.merge(capabilities);
+
+		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 
@@ -37,7 +46,7 @@ public class LinksOnAmazon {
 		.filter(s -> !s.isBlank())
 		.distinct()
 		.sorted()
-		.filter(s-> s.startsWith("C") || s.startsWith("D"))
+		.filter(s-> s.startsWith("C") || s.startsWith("F"))
 		.forEach(s-> System.out.println(s));
 
 		driver.close();
