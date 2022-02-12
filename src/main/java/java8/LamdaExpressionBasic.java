@@ -12,7 +12,7 @@ public class LamdaExpressionBasic {
 		 * 3. Symbol "->" will be used for lambda expression 
 		 */
 
-		IPrintable i = () -> System.out.println("from the lambda expression");
+		IPrintable i = () -> System.out.println("from the lambda expression : "+IPrintable.course);
 
 		i.print();
 	}
