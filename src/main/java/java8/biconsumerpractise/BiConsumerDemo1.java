@@ -13,7 +13,8 @@ public class BiConsumerDemo1 {
 		m.put("SS","2");
 		m.put("TS","3");
 		m.put("CS", "4");
-
+		
+		//BiConsumer usage
 		m.forEach((k,v) -> System.out.println(k+" : "+v));
 
 	}
