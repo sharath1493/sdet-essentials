@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="restassured.TC02_PostRequest">
+      <class name="functionaljava8.HandlingStateElementwithFunctionInterface">
         <methods>
-          <include name="postAPIRequest"/>
+          <include name="handleStaleElementwithFunctionInterface"/>
         </methods>
-      </class> <!-- restassured.TC02_PostRequest -->
+      </class> <!-- functionaljava8.HandlingStateElementwithFunctionInterface -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
